@@ -5,7 +5,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}'
 zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
-zstyle :compinstall filename '/home/austryx/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -21,9 +21,17 @@ bindkey -v
 
 eval "$(starship init zsh)"
 
+#Styling
+source ~/.config/zsh/catppuccin-zsh/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
 #Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#Styling
-source ~/.config/zsh/catppuccin-zsh/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+# pnpm
+export PNPM_HOME="~/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
