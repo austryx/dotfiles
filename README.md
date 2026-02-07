@@ -79,7 +79,6 @@ If you prefer to do things yourself or don't have Python installed, follow these
 | :--- | :--- | :--- |
 | **Zsh** | Shell configuration, plugins, and environment variables. | `zsh/.zshrc` |
 | **Starship** | High-performance, customizable prompt. | `starship/.config/starship.toml` |
-| **Kitty** | Fast, feature-rich GPU-based terminal. | `.config/kitty/` (via submodule) |
 | **Wallpapers** | A collection of wallpapers to match the aesthetic. | `wallpapers/Pictures/` |
 
 ## 🛠️ Customization
